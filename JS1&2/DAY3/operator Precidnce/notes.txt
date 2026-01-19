@@ -1,0 +1,7 @@
+Arithmetic operator precidence
+
+()
+**
+* or /    (left to right)
++or -     (left to right)  
+== or ==== or != or !==

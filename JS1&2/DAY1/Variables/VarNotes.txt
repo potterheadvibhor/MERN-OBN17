@@ -1,0 +1,8 @@
+there are three variable type in js
+var
+let
+const
+now var can redeclare where let and const can't 
+now var and let can reintalize where as const can't
+in case of scope var show global scope while let and const show block scope
+inside a function varible can be accress inside the function only cannot be access from outside no matter it is var or const or let

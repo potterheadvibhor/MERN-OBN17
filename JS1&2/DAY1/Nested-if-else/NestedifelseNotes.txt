@@ -1,0 +1,15 @@
+-nested if-else is if having another if-else block inside it
+ 
+ 
+*example  
+if(age>=18)
+      if(hasDrivingLicense)
+        console.log("Can Drive");
+      else
+     console.log("Can't Drive");
+else
+     console.log("Can't Drive");
+
+*Point to be Noted
+-it is not compulsory to have else at the end of the if-else ladder;
+-if any else-if is proved true in ladeer than all outher else-if will get get terminated;

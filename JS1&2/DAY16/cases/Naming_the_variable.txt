@@ -1,0 +1,15 @@
+camelcasing
+let dataBase="Mongodb"
+let gmailPassword="*****"
+
+pascalCase: all first letters of name is 
+
+let DatabasePassword="jefdwhb"
+
+snake_case:
+
+let database_password="kjshfjdn"
+
+screamingsnakecase
+
+let DATA_PASSWORD="shgfhewbfhe"

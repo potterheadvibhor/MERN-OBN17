@@ -1,0 +1,11 @@
+Type casting is conversion of one daata type into another
+typeof() is use to find the type of data type
+There are two type of conversion in js
+Implicit   or type coersion      :- which is Done by user
+explicit   or type conversion   :- Which is done by js itself
+
+in js if we are changing ANY NUMBER OTHER THAN 0 TO BOOLEAN THEN we will get true but only in case of 0 we will get false
+
+in js in string type conversion
+
+if we are using + operatot then it will concetinate 

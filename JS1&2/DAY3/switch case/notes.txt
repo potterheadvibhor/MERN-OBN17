@@ -1,0 +1,13 @@
+Switch case   is a conditional operator
+
+switch can have infinite case and at last it contain an default 
+in switch case if on econdition is find true then all the case after that will execute thats why we need to use break statement also and also we can use default at last if not all cases are found to our liking then we can use default
+
+Switch(condition)
+{
+    case1:
+              break;
+    case2:
+              break;
+    default:
+}

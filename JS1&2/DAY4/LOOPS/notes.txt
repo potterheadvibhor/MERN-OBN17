@@ -1,0 +1,4 @@
+types of loop in js
+for loop
+while loop
+do while loop

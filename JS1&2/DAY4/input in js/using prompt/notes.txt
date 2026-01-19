@@ -1,0 +1,10 @@
+/*
+In JavaScript, `prompt()` is used to display a dialog box that prompts the user for input.
+
+Example:
+*/
+
+let userInput = prompt("Enter something:");
+
+// The value returned by prompt is always a string or null (if cancelled)
+console.log(typeof userInput); // "string" or "object" (if null)

@@ -1,0 +1,17 @@
+While loops in js
+
+
+while(Condition)    // run if true 
+{
+    task to perform
+
+
+}
+
+
+
+
+while(false)      // hard coded
+{
+console.log("hello")    // unreachable
+}

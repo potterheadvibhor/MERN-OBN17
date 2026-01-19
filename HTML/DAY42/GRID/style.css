@@ -1,0 +1,52 @@
+h1{
+    color: white;
+    z-index: 1;
+    position: relative;
+}
+
+#bento-box{
+    height: 60vh;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
+
+.dibbe{
+    background-color: lightgray;
+    color: white;
+    border-radius: 50px;
+    padding: 20px;
+}
+
+#first{
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+#second{
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+#third{
+    grid-column-start: 4;
+    grid-column-end: 6;
+
+}
+
+#fourth{
+    grid-column-start: 6;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+#fifth{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+#sixth{
+    grid-column-start: 3;
+    grid-column-end: 5;
+}

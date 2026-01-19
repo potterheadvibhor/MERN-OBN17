@@ -1,0 +1,22 @@
+There are to types of Datatypes in js 
+primitive and non-primitive
+
+
+Primitive Data Types   :=
+
+Number
+String
+Boolean
+Undefined
+null
+symbol
+BigInt
+nan
+
+Non Primitive
+Array
+Object
+function
+
+
+
