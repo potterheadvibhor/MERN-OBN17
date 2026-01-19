@@ -1,4 +1,4 @@
-let arr1=[90, 2, 3, 4]
+let arr1=[2, 3, 4,90,90]
 let target1 = 90
 
 function Occurence(arr,target,findfirst)
