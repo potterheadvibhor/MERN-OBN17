@@ -5,15 +5,14 @@
 // let arr1=[4, 2, 4, 3, 2]   //array with duplicates
 //  let arr1=[10, 1, 7, 3, 2]    //Mixed Small and Large Values
 function insertionSort(arr){ 
-    let countI=0
-    let countJ=0
+    
 for(let i=0;i<arr.length-1;i++)
 {
         countI++
    let j=i+1
    while(j>0 && arr[j-1]>arr[j])
    {
-    countJ++
+   
     let temp=arr[j-1]
     arr[j-1]=arr[j]
     arr[j]=temp
