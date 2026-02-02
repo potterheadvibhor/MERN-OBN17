@@ -1,5 +1,5 @@
-// const divtag=document.getElementsByTagName("div")
-// console.log(divtag)
+const divtag=document.getElementsByTagName("*")
+console.log(divtag)
 
 // const myclass=document.getElementsByClassName("xyz")
 // console.log(myclass)

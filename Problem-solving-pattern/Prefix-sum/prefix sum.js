@@ -1,7 +1,8 @@
-let arr1=[1,2,3,4,5,6]
+let arr1=[10,2,-2,-20,10]
+let t=9
 
 
-//  prefix sum in same array we can also do it in different array
+//  prefix sum in same array 
 function Perfix_sum(arr)
 {
  for(let i=1;i<arr.length;i++)
