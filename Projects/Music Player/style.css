@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+#inner{
+    flex: 1;
+    background-color: rgb(135, 224, 173);
+    position: relative;
+    transition: 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#aside{
+    width: 0;
+    background-color: rgb(188, 175, 175);
+    transition: 0.4s ease;
+}
+
+#aside.active{
+    width: 30vw;
+}
+
+.arrow{
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    padding: 20px;
+    background-color: yellow;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.box{
+    /* height: 50vh; */
+    width: 50vh;
+    /* background-color: pink; */
+}
+
+
+.player{
+    width: 320px;
+    background: white;
+    border-radius: 25px;
+    padding: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.cover img{
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.info h2{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.info p{
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+#progress-area{
+    height: 6px;
+    width: 100%;
+    background: #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+#progress{
+    height: 100%;
+    width: 40%;
+    background: linear-gradient(90deg, #ff512f, #dd2476);
+    border-radius: 10px;
+}
+
+.controls{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 22px;
+}
+
+.controls i{
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.controls i:hover{
+    transform: scale(1.2);
+}
+
+.controls .fa-play{
+    /* background: #ff512f; */
+    /* color: white; */
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+}
