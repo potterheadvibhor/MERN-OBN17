@@ -1,0 +1,16 @@
+{
+  "name": "nodeday1",
+  "version": "1.0.0",
+  "description": "node for React Day One",
+  "license": "ISC",
+  "author": "Vibhor jain",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "figlet": "^1.11.0"
+  }
+}
