@@ -1,5 +1,20 @@
-export function NavBar()
+import { useEffect } from "react"
+import { useState } from "react"
+
+export function NavBar({setProdData,prodData})
 {
+    
+    let[query,setQuery]=useState("")
+    useEffect(()=>
+        {
+        const filteredProduct=prodData.filter((item)=>{
+        return item.title.toLowerCase().includes(query.toLowerCase())
+      })
+      console.log(query)
+      console.log(filteredProduct.length)
+      setProdData(filteredProduct)
+    },[query])
+
     return(
         <nav style={{
                       display:"flex",
@@ -41,7 +56,13 @@ export function NavBar()
             <div style={{
                           display:"flex"
             }}>
-                <input type="text" className="border p-2 rounded" placeholder="Serach Product" />
+                <input 
+                onChange={(e)=>
+                    {
+                        setQuery((e.target.value).trim())
+                    }
+                }
+                type="text" className="border p-2 rounded" placeholder="Serach Product" />
             </div>
         </nav>
     )

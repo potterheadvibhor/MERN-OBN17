@@ -2,10 +2,7 @@ export function Card({image,name,id})
 
 {
      return (
-    
-     
           <div 
-            key={id}
             className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition"
           >
 
