@@ -4,6 +4,7 @@ import { Products } from "./Components/Products"
 
  function App()
 {
+  let[ApiData,setApiData]=useState([])
   let[prodData,setProdData]=useState([])
 
     useEffect(()=>
@@ -13,13 +14,14 @@ import { Products } from "./Components/Products"
       let res= await fetch("https://dummyjson.com/products")
       let data= await res.json()
       setProdData(data.products)
+      setApiData(data.products)
         }
         getData()
     },[])
   return (
     <div className="min-h-screen flex flex-col">
-      <NavBar setProdData={setProdData} prodData={prodData} />
-      <Products setProdData={setProdData} prodData={prodData} />
+      <NavBar setProdData={setProdData} ApiData={ApiData}/>
+      <Products  prodData={prodData} />
     </div>
   )
 }

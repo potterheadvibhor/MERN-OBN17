@@ -1,17 +1,15 @@
 import { useEffect } from "react"
 import { useState } from "react"
 
-export function NavBar({setProdData,prodData})
+export function NavBar({setProdData,ApiData})
 {
     
     let[query,setQuery]=useState("")
     useEffect(()=>
         {
-        const filteredProduct=prodData.filter((item)=>{
+        const filteredProduct=ApiData.filter((item)=>{
         return item.title.toLowerCase().includes(query.toLowerCase())
       })
-      console.log(query)
-      console.log(filteredProduct.length)
       setProdData(filteredProduct)
     },[query])
 
