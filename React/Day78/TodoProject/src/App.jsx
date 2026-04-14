@@ -1,16 +1,18 @@
 import { useState } from "react"
-import { Container } from "./Components/Container"
 import { NavBar } from "./Components/NavBar"
+import { MainContainer } from "./Components/MainContainer"
 
 function App()
 {
-          let[isDark,isSetDarkMode]=useState(false)
+        let[darkMode,setDarkMode]=useState(false)
 
   return(
     <>
-    
-    <NavBar isSetDarkMode={isSetDarkMode}/>
-<Container/>    
+    <div className="flex flex-col h-screen">
+  <NavBar darkMode={darkMode} setDarkMode={setDarkMode}/>
+<MainContainer darkMode={darkMode} /> 
+    </div>
+     
     </>
   )
 }

@@ -1,20 +1,25 @@
-import { Navbar } from "./components/NavBar"
-import {Card1} from "./components/Card1"
-import {Card2} from "./components/Card2"
+import { useState } from "react"
+import Child from "./Components/Child"
 
 function App()
 {
- return (
-  <>
-  <Navbar/>
-  <div className="flex items-center gap-[20px]">
-  <Card1/>
-  <Card2/>
-  </div>
-  
-  </>
-  
- )
+  console.log("App Rendered")
+  let[Count,setCount]=useState(0)
+  return(
+    <div>
+      <div>
+        <h1>App Counter :{Count}</h1>
+      </div>
+      <div>
+        <button onClick={()=> setCount(prev=>prev+1)}>Increment</button>
+        <button onClick={()=> setCount(prev=>prev=0)}>Reset</button>
+        <button onClick={()=> setCount(prev=>prev-1)}>Decrement</button>
+      </div>
+      
+      <Child/>
+    </div>
+  )
 }
 
-export default App    
+
+export default App

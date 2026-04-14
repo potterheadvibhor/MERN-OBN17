@@ -1,13 +1,19 @@
-export function NavBar()
+export function NavBar({darkMode,setDarkMode})
 {
     return(
-        <div className="flex justify-between bg-[#FFC801] p-3 h-[50pw] border-2">
-            <h1>ToDoList</h1>
-            <div className="flex gap-3">
-            <button className="bg-orange-500 p-2 text-white py-2 rounded-md shadow-md hover:bg-[#A38000]  transition">Drak</button>
-            <button className="bg-orange-500 p-2 text-white py-2 rounded-md shadow-md hover:bg-[#A38000]  transition">Light</button>
+       <div className={'flex justify-between p-2' + (darkMode?" bg-black text-white ":" bg-[#F57799] ") }>
+        <h1>TodoList</h1>
+        <div >
+            <ul className=" flex gap-4 ">
+                <li>Home</li>
+                <li>Facebook</li>
+                <li>AboutUs</li>
+            </ul>
             </div>
-            
-        </div>
+            <div className="flex gap-4 bg-[FFB399]">
+                <button onClick={()=> setDarkMode(true)} className="">Dark</button>
+                <button onClick={()=> setDarkMode(false)} className="">Light</button>
+            </div>
+       </div>
     )
 }
