@@ -1,33 +1,28 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 export function MainContainer({darkMode}) {
 
- let[task,setTask]= useState({title:"",description:""})
+ let[todos,setTodos]= useState([])
+ let[title,setTitle]=useState("")
+ let[desc,setDesc]=useState("")
 
+
+useEffect(()=>{console.log(todos)},[todos])
  
- let handleChange=(e)=>
- {
-  let {name,value}=e.target;
 
-  setTask((prev)=>({
-     ...prev,
-     [name]:value
-  }))
-
- }
  
   return (
-    <div className={"flex-grow flex justify-between " + (darkMode?"bg-gray-700 text-white":"bg-[#FFF7CD]")}>
+    <div className={"grow flex justify-between h-screen " + (darkMode?"bg-gray-700 text-white":"bg-[#FFF7CD]")}>
       
       {/* Left Section */}
       <div className="flex-1 flex items-center justify-center">
-        <div className={"flex flex-col gap-3 p-6 rounded-lg  w-[300px] " + (darkMode?"bg-black text-white ":" bg-[#FDC3A1]")}>
+        <div className={"flex flex-col gap-3 p-6 rounded-lg  w-75 " + (darkMode?"bg-black text-white ":" bg-[#FDC3A1]")}>
           
           <label className={"font-semibold" + (darkMode?" text-white ":" text-black")} htmlFor="title"><h1>Title</h1></label>
           <input
-          name="title"
-          value={task.title}
-          onChange={handleChange}
+          
+          onChange={(e)=> setTitle((e.target.value).trim())}
+            value={title}
             className={"bg-white p-2 rounded-lg w-full outline-none" + (darkMode?" text-black ":" text-black")}
             type="text"
             placeholder="Enter Title"
@@ -36,19 +31,29 @@ export function MainContainer({darkMode}) {
 
           <label className={"font-semibold" + (darkMode?" text-white ":" text-black")} htmlFor="description">Description</label>
           <textarea
-           name="description"
-          value={task.description}
-          onChange={handleChange}
+         
+          onChange={(e)=> setDesc((e.target.value).trim())}
+           value={desc}
             className={"bg-white p-2 rounded-lg w-full outline-none" +  (darkMode?" text-black ":" text-black")}
             placeholder="Description"
             id="description"
           ></textarea>
           <button 
           onClick={()=>{
-            console.log(task)
+            if(title.length)
+            {
+            setTodos((prev)=>[...prev,{title,desc}])
+            setTitle("")
+            setDesc("")
+            }
+            else{
+              alert("please enter Title")
+            }
+            
+          
                      
           }}
-           className="rounded-lg bg-[#F57799] font-semibold hover:bg-[#FB9B8F]"
+           className="rounded-lg  font-semibold hover:bg-[#FB9B8F]"
            type="submit"
            >
             Add To List
@@ -58,10 +63,25 @@ export function MainContainer({darkMode}) {
       </div>
 
       {/* Right Section */}
-      <div className="flex-1  flex items-center justify-center">
-              <div className={"font-semibold flex flex-col gap-3 p-6 rounded-lg  w-[400px] " + (darkMode?"bg-black text-white ":" bg-[#FDC3A1]")}>
-                
-</div>
+      <div className="flex-1 flex flex-col gap-2 p-3  items-center overflow-y-scroll ">
+        {todos.map((todo,index)=>{
+                 return(<div key={index} className={" flex  flex-col gap-2 p-6 rounded-lg  w-[400px] " + (darkMode?"bg-black text-white ":" bg-[#FDC3A1]")}>
+                <h1 className="font-extrabold">Title</h1>
+                <h2 className="">{todo.title}</h2>
+                <h1 className="font-extrabold">Description</h1>
+                <h2>{todo.desc}</h2>
+                <button  className="rounded-lg  font-semibold hover:bg-[#FB9B8F]"
+                onClick={()=>{
+                   const filteredTodos= todos.filter((obj,idx)=>{
+   return index != idx
+                   })
+                   setTodos(filteredTodos)
+                }}
+                >Delete</button>
+
+</div>)
+        })}
+              
       </div>
 
     </div>
