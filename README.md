@@ -28,6 +28,6 @@ mern-obn/
 ├── react/
 │   ├── Day1/
 │   ├── Day2/
-│   ├── ... (hooks, components, projects)
+│   ├── ... (hooks, components, projects,Legacy Redux,Redux)
 │
 └── README.md
