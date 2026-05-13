@@ -1,10 +1,10 @@
-import { NavBar } from "./Components/NavBar"
+import React from 'react'
+import Cake from './Components/Cake'
 
-function App()
-{
+const App = () => {
   return (
     <div>
-<NavBar/>
+      <Cake />
     </div>
   )
 }
